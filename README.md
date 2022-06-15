@@ -7,7 +7,7 @@ A lip-sync [VRM](https://vrm.dev/en/) avatar client for zero-webcam mic-based vt
 Because multitasking. Because sometimes you need to run an avatar without a webcam. Because vtubers are disabled too. Because it's not always essential to bring your face to work. Because an avatar the folks associate with you can be more personable than a little green light when you're on a voice call. Because what if VRM, but with PNGtuber rules?
 
 # Usage
-While this works just fine for testing if you [visit its pages url](https://automattic.github.io/VU-VRM/) (and allow mic access), it's intended for use in OBS as a browser source.
+While this works just fine for testing if you [visit its pages url](https://automattic.github.io/VU-VRM/) (and allow mic access), it's intended for use in [OBS](https://obsproject.com) as a browser source.
 
 To allow browser sources in OBS to receive mic input, it needs launching with these arguments:
 
@@ -19,7 +19,7 @@ In Windows, add the args to OBS' properties.
 
 VU-VRM can then be added [as a URL](https://automattic.github.io/VU-VRM/) / [local file](https://github.com/Automattic/VU-VRM/archive/refs/heads/trunk.zip).
 
-Load your local .vrm file, set your levels in the interface, dismiss the UI and you're good to lipsync in a kinda-lifelike way!
+Load your local .vrm file, set your levels in the interface, dismiss the UI and you're good to lipsync in a kinda-lifelike way for steams or virtual webcam for other chat apps.
 
 Plays nice with VRMs created in [VroidStudio](https://vroid.com/en/studio) and other standard compliant VRMs.
 
