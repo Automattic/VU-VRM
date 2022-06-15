@@ -145,7 +145,7 @@ vrm.springBoneManager.reset();
 
 // load default VRM
 
-load( 'https://itstallulah.github.io/vrm/VU-VRM.vrm' );
+load( 'assets/VU-VRM.vrm' );
 
 // grid / axis helpers
 //			const gridHelper = new THREE.GridHelper( 10, 10 );
