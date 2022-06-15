@@ -145,7 +145,8 @@ vrm.springBoneManager.reset();
 
 // load default VRM
 
-load( 'assets/VU-VRM.vrm' );
+// beware of CORS errors when using this locally. If you can't https, import the required libraries.
+load( './assets/VU-VRM.vrm' );
 
 // grid / axis helpers
 //			const gridHelper = new THREE.GridHelper( 10, 10 );
