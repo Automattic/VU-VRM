@@ -1,5 +1,5 @@
 # VU-VRM
-A lip-sync VRM avatar client for zero-webcam mic-based vtubing
+A lip-sync [VRM](https://vrm.dev/en/) avatar client for zero-webcam mic-based vtubing
 
 # Why?
 Because multitasking. Because sometimes you need to run an avatar without a webcam. Because vtubers are disabled too. Because it's not always essential to bring your face to work. Because an avatar the folks associate with you can be more personable than a little green light when you're on a voice call. Because what if VRM, but with PNGtuber rules?
@@ -19,7 +19,9 @@ In Windows, add the args to OBS' properties.
 
 VU-VRM can then be added [as a URL](https://automattic.github.io/VU-VRM/) / [local file](https://github.com/Automattic/VU-VRM/archive/refs/heads/trunk.zip).
 
-Load your VRM and set your levels in the interface, dismiss the UI and you're good to lipsync in a kinda-lifelike way!
+Load your local .vrm file, set your levels in the interface, dismiss the UI and you're good to lipsync in a kinda-lifelike way!
+
+Plays nice with VRMs created in [VroidStudio](https://vroid.com/en/studio) and other standard compliant VRMs.
 
 # Interface
 Minimal; intended to acheive a mic volume threshold at which the avatar's mouth and body moves.
