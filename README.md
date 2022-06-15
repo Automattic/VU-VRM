@@ -19,11 +19,11 @@ In MacOS / Linux, launch it from command line, appending these.
 
 In Windows, add the args to OBS' properties.
 
-VU-VRM can then be added [as a URL](https://automattic.github.io/VU-VRM/) / [local file](https://github.com/Automattic/VU-VRM/archive/refs/heads/trunk.zip).
+VU-VRM can then be added as an OBS browser source [as a URL](https://automattic.github.io/VU-VRM/) or as a [local copy](https://github.com/Automattic/VU-VRM/archive/refs/heads/trunk.zip).
 
-Load your local .vrm file, set your levels in the interface, dismiss the UI and you're good to lipsync in a kinda-lifelike way for steams or virtual webcam for other chat apps.
+Use the interface (or drag and drop) to load a local .vrm file, set your levels, dismiss the UI and you're good to lipsync in a kinda-lifelike way for steams or virtual webcam for other chat apps.
 
-Plays nice with VRMs created in [VroidStudio](https://vroid.com/en/studio) and other standard compliant VRMs.
+Plays nice with VRMs created in [VroidStudio](https://vroid.com/en/studio) and other standard compliant VRMs. 
 
 # Interface
 Minimal; intended to acheive a mic volume threshold at which the avatar's mouth and body moves.
