@@ -32,7 +32,7 @@ To allow browser sources in OBS (like this) to receive mic input, OBS needs laun
 - Windows: create a shortcut to OBS and add the arguments to the *Target* field in the shortcut's properties.
 - Linux users don't need hints to launch things with arguments ;)
 
-VU-VRM can then be added as an OBS browser source [from a URL](https://automattic.github.io/VU-VRM/) or as a [local file](https://github.com/Automattic/VU-VRM/archive/refs/heads/trunk.zip).
+VU-VRM can then be added as an OBS browser source [from a URL](https://automattic.github.io/VU-VRM/) or as a [local file](https://github.com/Automattic/VU-VRM/archive/refs/heads/trunk.zip), and is intentionally transparent for the purpose.
 
 # ToDo
 - Mic input selector
