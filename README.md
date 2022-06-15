@@ -7,7 +7,7 @@ Because multitasking. Because sometimes you need to run an avatar without a webc
 ![Alt text](/assets/VU-VRM.jpg?raw=true "Title")
 
 # Usage
-While this works just fine for testing if you [visit its pages url](https://automattic.github.io/VU-VRM/) (and allow mic access), it's intended for use in OBS as a broswer source.
+While this works just fine for testing if you [visit its pages url](https://automattic.github.io/VU-VRM/) (and allow mic access), it's intended for use in OBS as a browser source.
 
 To allow browser sources in OBS to receive mic input, it needs launching with these arguments:
 
