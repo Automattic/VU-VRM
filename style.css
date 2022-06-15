@@ -1,0 +1,102 @@
+* {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ overflow: hidden;
+}
+
+body {
+ background-color:black;
+}
+
+canvas {
+ position:absolute;
+ width:100vw !important;
+ height:100vh !important;
+ /*cursor: none;*/ 
+ z-index:1;
+}
+
+.backplate{
+ position:absolute;
+ font-family: Sans-Serif;
+ color:#2F5164;
+ margin:10px;
+ font-size:14px;
+}
+
+.credits{
+ position:absolute;
+ right:0px;
+ font-family: Sans-Serif;
+ color:#2F5164;
+ margin:10px;
+ font-size:14px;
+text-align:right;  
+}
+
+.interface{
+ position:absolute;
+ bottom:0px;
+ right:0px;
+ font-family: Sans-Serif;
+ background-color:#2F5164;
+ margin:10px;
+ font-size:14px;
+ z-index:999;
+ color:white;
+ padding:5px;
+ border-radius:5px;
+ cursor: pointer!important; 
+ width:200px;
+}
+
+.infobar{
+ position:absolute;
+ bottom:0px;
+ left:0px;
+ font-family: Sans-Serif;
+ background-color:#2F5164;
+ margin:10px;
+ font-size:14px;
+ z-index:998;
+ color:white;
+ padding:5px;
+ border-radius:5px;
+ cursor: pointer!important; 
+}
+
+.interface input{
+ background-color:white;
+ cursor: pointer!important; 
+}
+
+.interface .file{
+ background-color:#2F5164;
+}
+
+
+.interface .closebtn{
+ color:red;
+ cursor: pointer!important; 
+text-align:right;
+margin-bottom: -20px;
+margin-right: 3px}
+
+.interface input[type=number]::-webkit-inner-spin-button, 
+.interface input[type=number]::-webkit-outer-spin-button {  
+  opacity: 1;
+}
+
+.highlight{
+ background-color : black;
+ border-radius : 5px;
+ padding: 1px;
+ padding-left:5px;
+ padding-right:5px;
+ color: white;
+ font-weight:bold;
+ font-size:12px;
+ line-height:15px;
+}
+
