@@ -4,7 +4,7 @@ A lip-sync VRM avatar client for zero-webcam mic-based vtubing
 # Why?
 Because multitasking. Because sometimes you need to run an avatar without a webcam. Because vtubers are disabled too. Because it's not always essential to bring your face to work. Because an avatar the folks associate with you can be more personable than a little green light when you're on a voice call. 
 
-![Alt text](/images/VU-VRM.jpg?raw=true "Title")
+![Alt text](/assets/VU-VRM.jpg?raw=true "Title")
 
 # Usage
 While this works just fine for testing if you visit its pages url, it's intended for use in OBS as a broswer source.
