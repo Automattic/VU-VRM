@@ -16,14 +16,13 @@ Use the interface (or drag and drop) to load a local .vrm file, set your levels,
 Plays nice with VRMs created in [VroidStudio](https://vroid.com/en/studio) and other standard compliant VRMs. 
 
 # Interface
-Minimal; intended to acheive a mic volume threshold at which the avatar's mouth and body moves.
+Minimal; intended to acheive a mic volume threshold at which the avatar's mouth and body moves, then to be dismissed.
 
 In case your mic / input is quiet, the gain can boost the mouth or body movement.
 
 This volume = movement aspect is what makes this avatar client literally a form of VU volume unit meter, hence its name.
 
 # OBS launch specifics
-
 To allow browser sources in OBS (like this) to receive mic input, OBS needs launching with these arguments:
 
 `--use-fake-ui-for-media-stream --allow-file-access-from-files`

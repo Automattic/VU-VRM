@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>VU-VRM</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
 <!-- three.min.js r110 -->
 <script src="https://cdn.jsdelivr.net/npm/three@0.110.0/build/three.min.js"></script>
 
@@ -18,11 +9,8 @@
 
 <!-- pixiv three-vrm.js -->
 <script src="https://unpkg.com/@pixiv/three-vrm@0.3.0/lib/three-vrm.js"></script>
-<!-- partial -->
 
-  <script  src="./script.js"></script>
-
-  <div class="backplate" id="backplate">
+ <div class="backplate" id="backplate">
     <h1>VU-VRM</h1>
       <h3>A simple mic-driven VRM client</h3>
       <h4>Mic access required / Designed for use in OBS</h4>
@@ -36,7 +24,7 @@
     <p>A cute default avatar</p>
   
     </div>
-`
+
     <div id="credits" class="credits">
       <p>v1.0 by itsTallulahhh</p>
       <p>an Automattic Empathy</p>
@@ -48,34 +36,40 @@
     </div>
 
     <div class="interface" id="interface" onclick="interface()">
-      <p class="closebtn" id="closebtn" onclick="hideinterface()">🆇</p>
+      <div class="sliders" id="sliders">
 
       <p>
+          <span class="controlboxlabel">Input Volume VU</span>
+          <input type="range" min="0" max="50" value="10" class="slider" id="inputlevel">
 
-          <input type="number" id="mouththreshold" min="-100" max="100" value="10" size="3">
+          <br>
+
           <span class="controlboxlabel">Mouth Threshold</span>
+          <input type="range" min="0" max="50" value="10" class="slider" id="mouththreshold">
 
           <br>
-
-          <input type="number" id="bodythreshold" min="-100" max="100" value="10" size="3">
           <span class="controlboxlabel">Body Threshold</span>
+          <input type="range" min="0" max="50" value="10" class="slider" id="bodythreshold">
 
           <br>
-
-          <input type="number" id="mouthboost" min="-100" max="100" value="10" size="3">
-          <span class="controlboxlabel">Mouth Gain</span>
+          <span class="controlboxlabel">Mouth Gain Boost</span>
+          <input type="range" min="0" max="50" value="10" class="slider" id="mouthboost">
 
           <br>
-
-          <input type="number" id="bodymotion" min="-100" max="100" value="10" size="3">
-          <span class="controlboxlabel">Body Gain</span>
+          <span class="controlboxlabel">Body Gain Boost</span>
+          <input type="range" min="0" max="50" value="10" class="slider" id="bodymotion">
 
           </p>
+        
+      </div>
+      
+      <div class="fileinput" id="fileinput">
 
           <p><input id="file" class="file" type="file" onchange="dofile()"></p>
 
+      </div>
+      
+              <div class="closebtn" id="closebtn" onclick="hideinterface()">X</div>
+
         
     </div> 
-  
-  </body>
-</html>

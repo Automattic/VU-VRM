@@ -1,8 +1,3 @@
-/*
-VU-VRM
-Let's make a VRM into a VU meter!
-*/
-
 // interface - setup init values
 
 var mouththreshold = 10;
@@ -145,8 +140,7 @@ vrm.springBoneManager.reset();
 
 // load default VRM
 
-// beware of CORS errors when using this locally. If you can't https, import the required libraries.
-load( 'https://automattic.github.io/VU-VRM/assets/VU-VRM.vrm' );
+load( 'https://itstallulah.github.io/vrm/VU-VRM.vrm' );
 
 // grid / axis helpers
 //			const gridHelper = new THREE.GridHelper( 10, 10 );
@@ -209,6 +203,10 @@ navigator.mediaDevices
       // audio in spectrum expressed as array
       // console.log(array.toString());
       // useful for mouth shape variance
+      
+      // move the interface slider
+              document.getElementById("inputlevel").value = inputvolume;
+
 
 
 // mic based / endless animations (do stuff)
@@ -458,4 +456,3 @@ function interface() {
   }
 // end
 //ok
- 
