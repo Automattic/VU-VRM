@@ -16,9 +16,7 @@ Use the interface (or drag and drop) to load a local .vrm file, set your levels,
 Plays nice with VRMs created in [VroidStudio](https://vroid.com/en/studio) and other standard compliant VRMs. 
 
 # Interface
-Minimal; intended to acheive a mic volume threshold at which the avatar's mouth and body moves, then to be dismissed.
-
-In case your mic / input is quiet, the gain can boost the mouth or body movement.
+Minimal; intended to acheive a mic volume threshold at which the avatar's mouth and body moves, adjust gain as needed, then to be dismissed.
 
 This volume = movement aspect is what makes this avatar client literally a form of VU volume unit meter, hence its name.
 
@@ -35,7 +33,6 @@ VU-VRM can then be added as an OBS browser source [from a URL](https://automatti
 
 # ToDo
 - Mic input selector
-- Slider based interface scaled to vh/vw to ensure operability at high dpi
 - Background controls
 - localstorage use
 - Smoother more natural state-to-state eased body movement
@@ -45,3 +42,7 @@ VU-VRM can then be added as an OBS browser source [from a URL](https://automatti
 - a less basic default pose
 - Migrate from ScriptProcessorNode method to AudioWorkletNode
 - Hook it to chat app APIs for group VRM chats!
+
+# Changelog
+- Slider based interface
+- Input level slider
