@@ -20,19 +20,22 @@ canvas {
 .backplate{
   position:absolute;
   font-family: Sans-Serif;
-  color:#2F5164;
+  color:white;
   margin:10px;
   font-size:14px;
+  opacity:0.75;
 }
 
 .credits{
   position:absolute;
   right:0px;
   font-family: Sans-Serif;
-  color:#2F5164;
+  color:white;
   margin:10px;
   font-size:14px;
 text-align:right;  
+opacity:0.75;
+
 }
 
 .infobar{
