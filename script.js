@@ -138,9 +138,8 @@ vrm.springBoneManager.reset();
 
   }
 
-// load default VRM
-
-load( 'https://itstallulah.github.io/vrm/VU-VRM.vrm' );
+// beware of CORS errors when using this locally. If you can't https, import the required libraries.
+load( 'https://automattic.github.io/VU-VRM/assets/VU-VRM.vrm' );
 
 // grid / axis helpers
 //			const gridHelper = new THREE.GridHelper( 10, 10 );
@@ -337,6 +336,10 @@ currentVrm.blendShapeProxy.setValue(
 
 
       }}
+
+      //look at camera is more efficient on blink
+lookAtTarget.position.x = camera.position.x;
+
     }; // end fn stream
   },
   function (err) {
@@ -348,8 +351,6 @@ currentVrm.blendShapeProxy.setValue(
 
 function blink() {
 var blinktimeout = Math.floor(Math.random() * 250) + 50;
-//look at camera is more efficient on blink
-lookAtTarget.position.x = camera.position.x;
 lookAtTarget.position.y =
   camera.position.y - camera.position.y * 2 + 1.25;
   
