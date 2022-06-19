@@ -339,6 +339,7 @@ currentVrm.blendShapeProxy.setValue(
 
       //look at camera is more efficient on blink
 lookAtTarget.position.x = camera.position.x;
+lookAtTarget.position.y = (camera.position.y-camera.position.y-camera.position.y)+1;
 
     }; // end fn stream
   },
