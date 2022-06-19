@@ -1,9 +1,32 @@
-// interface - setup init values
+// interface - setup / load init values
 
 var mouththreshold = 10;
 var mouthboost = 10;
 var bodythreshold = 10;
 var bodymotion = 10;
+
+if (localStorage.localvalues) {
+
+  var initvalues = true;
+
+  var mouththreshold = Number(localStorage.mouththreshold) ;
+  var mouthboost = Number(localStorage.mouthboost) ;
+  var bodythreshold = Number(localStorage.bodythreshold) ;
+  var bodymotion = Number(localStorage.bodymotion) ;
+
+  console.log(Number(localStorage.mouththreshold));
+  console.log(Number(localStorage.mouthboost));
+  console.log(Number(localStorage.bodythreshold));
+  console.log(Number(localStorage.bodymotion));
+
+} else {
+
+  var mouththreshold = 10;
+  var mouthboost = 10;
+  var bodythreshold = 10;
+  var bodymotion = 10;
+
+}
 
 // renderer
 const renderer = new THREE.WebGLRenderer({ alpha: true , antialias: true ,powerPreference: "low-power" });
@@ -404,7 +427,6 @@ if ( !file ) { return; }
 const blob = new Blob( [ file ], { type: "application/octet-stream" } );
 const url = URL.createObjectURL( blob );
  load( url );
-
 } );
 
 
@@ -426,11 +448,28 @@ function onWindowResize(){
 var talktime = true;
 
 function interface() {
+
+  if (initvalues == true){
+  if (localStorage.localvalues) {
+    initvalues = false;
+    document.getElementById("mouththreshold").value = mouththreshold;
+    document.getElementById("mouthboost").value = mouthboost;
+    document.getElementById("bodythreshold").value = bodythreshold;
+    document.getElementById("bodymotion").value = bodymotion;
+  }}
+
     
     mouththreshold = document.getElementById("mouththreshold").value;
     mouthboost = document.getElementById("mouthboost").value;
     bodythreshold = document.getElementById("bodythreshold").value;
     bodymotion = document.getElementById("bodymotion").value;
+
+    // store it too
+    localStorage.localvalues = 1;
+    localStorage.mouththreshold = mouththreshold;
+    localStorage.mouthboost = mouthboost;
+    localStorage.bodythreshold = bodythreshold;
+    localStorage.bodymotion = bodymotion;
 
 }
 
@@ -457,4 +496,9 @@ function interface() {
    load( url );
   }
 // end
+
+// wait to trigger interface and load init values
+
+setTimeout(() => {  interface(); }, 500);
+
 //ok
