@@ -67,7 +67,7 @@ opacity:0.75;
   border-radius:5px;
   width:200px;
   opacity:0.75;
-  transform:scale(0.75);
+  transform:scale(0.85);
   transform-origin: bottom right;
 }
 
@@ -84,7 +84,7 @@ opacity:0.75;
 .interface .slider{
   appearance: none;
   width: 100%; 
-  height: 20px; 
+  height: 13px; 
   background: #000; 
   opacity:1;
   margin-top:3px;

@@ -1,32 +1,30 @@
-// interface - setup / load init values
+// setup
 
-var mouththreshold = 10;
-var mouthboost = 10;
-var bodythreshold = 10;
-var bodymotion = 10;
+  //expression setup
+var expressionyay = 0;
+var expressionoof = 0;
+var expressionlimityay = 0.5;
+var expressionlimitoof = 0.5;
+var expressionease = 150;
+var expressionintensity = 0.15;
 
+  //interface values
 if (localStorage.localvalues) {
-
   var initvalues = true;
-
   var mouththreshold = Number(localStorage.mouththreshold) ;
   var mouthboost = Number(localStorage.mouthboost) ;
   var bodythreshold = Number(localStorage.bodythreshold) ;
   var bodymotion = Number(localStorage.bodymotion) ;
-
-  console.log(Number(localStorage.mouththreshold));
-  console.log(Number(localStorage.mouthboost));
-  console.log(Number(localStorage.bodythreshold));
-  console.log(Number(localStorage.bodymotion));
-
+  var expression = Number(localStorage.expression) ;
 } else {
-
   var mouththreshold = 10;
   var mouthboost = 10;
   var bodythreshold = 10;
   var bodymotion = 10;
-
+  var expression = 80;
 }
+
+// setup three-vrm
 
 // renderer
 const renderer = new THREE.WebGLRenderer({ alpha: true , antialias: true ,powerPreference: "low-power" });
@@ -140,10 +138,6 @@ vrm.springBoneManager.reset();
     vrm.humanoid.getBoneNode(
       THREE.VRMSchema.HumanoidBoneName.Spine
     ).rotation.z = randomsomesuch();
-
-    vrm.humanoid.getBoneNode(
-      THREE.VRMSchema.HumanoidBoneName.Hips
-    ).rotation.y += randomsomesuch()*10;
 
     vrm.lookAt.target = lookAtTarget;
     vrm.springBoneManager.reset();
@@ -357,12 +351,25 @@ currentVrm.blendShapeProxy.setValue(
           THREE.VRMSchema.HumanoidBoneName.LeftShoulder
         ).rotation.z /= springback;
 
+      }
 
-      }}
+                          // yay/oof expression drift
+                          expressionyay += (Math.random() - 0.5) / expressionease;
+                          if(expressionyay > expressionlimityay){expressionyay=expressionlimityay};if(expressionyay < 0){expressionyay=0};
+                          currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Fun, expressionyay);
+                          expressionoof += (Math.random() - 0.5) / expressionease;
+                          if(expressionoof > expressionlimitoof){expressionoof=expressionlimitoof};if(expressionoof < 0){expressionoof=0};
+                          currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Angry, expressionoof);
+    
+    }
+
+
+
+
 
       //look at camera is more efficient on blink
 lookAtTarget.position.x = camera.position.x;
-lookAtTarget.position.y = (camera.position.y-camera.position.y-camera.position.y)+1;
+lookAtTarget.position.y = ((camera.position.y-camera.position.y-camera.position.y)/2)+0.5;
 
     }; // end fn stream
   },
@@ -370,6 +377,7 @@ lookAtTarget.position.y = (camera.position.y-camera.position.y-camera.position.y
     console.log("The following error occured: " + err.name);
   }
 );
+
 
 // blink
 
@@ -398,6 +406,8 @@ currentVrm.blendShapeProxy.setValue(
   1
 );
 }
+
+
 
 // loop blink timing
 (function loop() {
@@ -456,13 +466,17 @@ function interface() {
     document.getElementById("mouthboost").value = mouthboost;
     document.getElementById("bodythreshold").value = bodythreshold;
     document.getElementById("bodymotion").value = bodymotion;
+    document.getElementById("expression").value = expression;
   }}
 
-    
     mouththreshold = document.getElementById("mouththreshold").value;
     mouthboost = document.getElementById("mouthboost").value;
     bodythreshold = document.getElementById("bodythreshold").value;
     bodymotion = document.getElementById("bodymotion").value;
+
+    expression = document.getElementById("expression").value;
+    expressionlimityay = expression * expressionintensity;
+    expressionlimitoof = (100 - expression)*expressionintensity; 
 
     // store it too
     localStorage.localvalues = 1;
@@ -470,6 +484,7 @@ function interface() {
     localStorage.mouthboost = mouthboost;
     localStorage.bodythreshold = bodythreshold;
     localStorage.bodymotion = bodymotion;
+    localStorage.expression = expression;
 
 }
 
