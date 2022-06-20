@@ -46,3 +46,4 @@ VU-VRM can then be added as an OBS browser source [from a URL](https://automatti
 # Changelog
 - Slider based interface
 - Input level slider
+- Two-expression crossfade with random wander and bias slider
