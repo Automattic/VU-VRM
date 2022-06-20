@@ -7,6 +7,7 @@ var expressionlimityay = 0.5;
 var expressionlimitoof = 0.5;
 var expressionease = 150;
 var expressionintensity = 0.15;
+var expressioncrossover = 0.666;
 
   //interface values
 if (localStorage.localvalues) {
@@ -354,12 +355,12 @@ currentVrm.blendShapeProxy.setValue(
       }
 
                           // yay/oof expression drift
-                          expressionyay += (Math.random() - 0.5) / expressionease;
-                          if(expressionyay > expressionlimityay){expressionyay=expressionlimityay};if(expressionyay < 0){expressionyay=0};
-                          currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Fun, expressionyay);
-                          expressionoof += (Math.random() - 0.5) / expressionease;
-                          if(expressionoof > expressionlimitoof){expressionoof=expressionlimitoof};if(expressionoof < 0){expressionoof=0};
-                          currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Angry, expressionoof);
+expressionyay += (Math.random() - 0.5) / expressionease;
+if(expressionyay > expressionlimityay){expressionyay=expressionlimityay};if(expressionyay < 0){expressionyay=0};
+currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Fun, expressionyay);
+expressionoof += (Math.random() - 0.5) / expressionease;
+if(expressionoof > expressionlimitoof){expressionoof=expressionlimitoof};if(expressionoof < 0){expressionoof=0};
+currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Angry, expressionoof);
     
     }
 
@@ -475,8 +476,11 @@ function interface() {
     bodymotion = document.getElementById("bodymotion").value;
 
     expression = document.getElementById("expression").value;
-    expressionlimityay = expression * expressionintensity;
-    expressionlimitoof = (100 - expression)*expressionintensity; 
+    expressionlimityay = (expression * expressionintensity)*expressioncrossover;
+    expressionlimitoof = ((100 - expression)*expressionintensity)*expressioncrossover; 
+
+    console.log(expressionlimityay);
+    console.log(expressionlimitoof);
 
     // store it too
     localStorage.localvalues = 1;
