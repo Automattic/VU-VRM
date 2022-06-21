@@ -5,9 +5,8 @@ var expressionyay = 0;
 var expressionoof = 0;
 var expressionlimityay = 0.5;
 var expressionlimitoof = 0.5;
-var expressionease = 150;
-var expressionintensity = 0.15;
-var expressioncrossover = 0.666;
+var expressionease = 100;
+var expressionintensity = 0.666;
 
   //interface values
 if (localStorage.localvalues) {
@@ -354,12 +353,14 @@ currentVrm.blendShapeProxy.setValue(
 
       }
 
-                          // yay/oof expression drift
+// yay/oof expression drift
 expressionyay += (Math.random() - 0.5) / expressionease;
-if(expressionyay > expressionlimityay){expressionyay=expressionlimityay};if(expressionyay < 0){expressionyay=0};
+if(expressionyay > expressionlimityay){expressionyay=expressionlimityay};
+if(expressionyay < 0){expressionyay=0};
 currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Fun, expressionyay);
 expressionoof += (Math.random() - 0.5) / expressionease;
-if(expressionoof > expressionlimitoof){expressionoof=expressionlimitoof};if(expressionoof < 0){expressionoof=0};
+if(expressionoof > expressionlimitoof){expressionoof=expressionlimitoof};
+if(expressionoof < 0){expressionoof=0};
 currentVrm.blendShapeProxy.setValue(THREE.VRMSchema.BlendShapePresetName.Angry, expressionoof);
     
     }
@@ -476,11 +477,15 @@ function interface() {
     bodymotion = document.getElementById("bodymotion").value;
 
     expression = document.getElementById("expression").value;
-    expressionlimityay = (expression * expressionintensity)*expressioncrossover;
-    expressionlimitoof = ((100 - expression)*expressionintensity)*expressioncrossover; 
+    expressionlimityay = (expression);
+    expressionlimitoof = (100 - expression); 
+    expressionlimityay = expressionlimityay/100;
+    expressionlimitoof = expressionlimitoof/100;
+    expressionlimityay = expressionlimityay*expressionintensity;
+    expressionlimitoof = expressionlimitoof*expressionintensity;    
 
-    console.log(expressionlimityay);
-    console.log(expressionlimitoof);
+    console.log("Expression " + expressionyay + " yay / " + expressionoof + " oof");
+    console.log("Expression mix " + expressionlimityay + " yay / " + expressionlimitoof + " oof");
 
     // store it too
     localStorage.localvalues = 1;
