@@ -6,7 +6,7 @@ var expressionoof = 0;
 var expressionlimityay = 0.5;
 var expressionlimitoof = 0.5;
 var expressionease = 100;
-var expressionintensity = 0.666;
+var expressionintensity = 0.75;
 
   //interface values
 if (localStorage.localvalues) {
