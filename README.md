@@ -1,12 +1,11 @@
 # VU-VRM
-A lip-sync [VRM](https://vrm.dev/en/) avatar client for zero-webcam mic-based vtubing
+A lip-sync VRM avatar client for zero-webcam mic-based vtubing: 
+[automattic.github.io/VU-VRM/](https://automattic.github.io/VU-VRM/)
 
 ![Image](/assets/VU-VRM.gif?raw=true "VU-VRM")
 
-[automattic.github.io/VU-VRM/](https://automattic.github.io/VU-VRM/)
-
 # Why?
-Because multitasking. Because sometimes you need to run an avatar without a webcam. Because vtubers are disabled too. Because it's not always essential to bring your face to work. Because an avatar the folks associate with you can be more personable than a little green light when you're on a voice call. Because what if VRM, but with PNGtuber rules?
+Because multitasking. Because sometimes you need to run an avatar without a webcam. Because vtubers are disabled too. Because it's not always essential to bring your face to work. Because an avatar the folks associate with you can be more personable than a little green light when you're on a voice call. Because what if [VRM](https://vrm.dev/en/), but with PNGtuber rules?
 
 # Usage
 While this works just fine for testing if you [visit its pages url](https://automattic.github.io/VU-VRM/) (and allow mic access), it's intended for use in [OBS](https://obsproject.com) as a browser source.
@@ -44,6 +43,6 @@ VU-VRM can then be added as an OBS browser source [from a URL](https://automatti
 - Hook it to chat app APIs for group VRM chats!
 
 # Changelog
-- Slider based interface
-- Input level slider
+- Veritcal slider based interface
+- Input level VU
 - Two-expression crossfade with random wander and bias slider
