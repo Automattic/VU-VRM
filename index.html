@@ -21,33 +21,32 @@
 
 <script  src="./script.js"></script>
 
- <div class="backplate" id="backplate">
+ <div class="backplate" id="backplate" onclick="hideinfo()">
     <h1>VU-VRM</h1>
       <h3>A simple mic-driven VRM client</h3>
       <h4>Mic access required / Designed for use in OBS</h4>
       <h4>Built for hands-free webcam-free inclusivity</h4>
-      <br>
-      <p>Features:</p>
-    <p>Local VRM file support</p>
-    <p>Microphone-driven lip sync</p>
-    <p>Random upper body animation</p>
-    <p>Animation value fine tuning</p> 
-    <p>A cute default avatar</p>
   
     </div>
 
-    <div id="credits" class="credits">
+    <div id="credits" class="credits" onclick="hideinfo()"> 
       <p>v1.0 by itsTallulahhh</p>
       <p>an Automattic Empathy</p>
       <p>Microphone permission required</p>
-    </div>
 
-    <div id="infobar" class="infobar">
+      <p>Click to dismiss</p>
+
+</div>
+
+    <div id="infobar" class="infobar" onclick="hideinfo()">
       <p><small>Launch OBS with these arguments to use this as a Browser Source:</small></p>
       <p><span class="highlight">--use-fake-ui-for-media-stream --allow-file-access-from-files</span></p>
     </div>
 
     <div class="interface" id="interface" onclick="interface()">
+
+      <div class="closebtn" id="closebtn" onclick="hideinterface()">❌</div>
+
       <div class="sliders" id="sliders">
 
       <p>
@@ -80,12 +79,10 @@
       </div>
       
       <div class="fileinput" id="fileinput">
-
-          <p><input id="file" class="file" type="file" onchange="dofile()"></p>
-
+          <p>
+            <input id="file" class="file" type="file" accept=".vrm,.VRM" onchange="dofile()"></p>
       </div>
       
-              <div class="closebtn" id="closebtn" onclick="hideinterface()">X</div>
 
         
     </div> 

@@ -422,13 +422,10 @@ setTimeout(function () {
 
 // drag and drop + file handler
 window.addEventListener( 'dragover', function( event ) {
-
 event.preventDefault();
-
 } );
 
 window.addEventListener( 'drop', function( event ) {
-
 event.preventDefault();
 
 // read given file then convert it to blob url
@@ -506,6 +503,18 @@ function interface() {
   var y = document.getElementById("credits");
   a.style.display = "none";
   b.style.display = "none";
+  x.style.display = "none";
+  y.style.display = "none";
+
+  }
+
+// click to dismiss non-interface divs
+function hideinfo() {
+
+  var a = document.getElementById("backplate");
+  var x = document.getElementById("infobar");
+  var y = document.getElementById("credits");
+  a.style.display = "none";
   x.style.display = "none";
   y.style.display = "none";
 

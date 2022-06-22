@@ -110,9 +110,10 @@ opacity:0.75;
 
 .interface .closebtn{
   color:red;
-text-align:right;
-margin-top: -20px;
-margin-right: 3px;
+text-align:left;
+margin-top: -5px;
+margin-bottom: -15px;
+margin-left: -5px;
   font-size:14px;
 }
 
