@@ -24,6 +24,10 @@ canvas {
   margin:10px;
   font-size:14px;
   opacity:0.75;
+  font-family: Sans-Serif;
+  background-color:#2F5164;
+  padding:10px;
+  border-radius:5px;
 }
 
 .credits{
@@ -35,7 +39,11 @@ canvas {
   font-size:14px;
 text-align:right;  
 opacity:0.75;
-
+font-family: Sans-Serif;
+background-color:#2F5164;
+padding:10px;
+border-radius:5px;
+z-index:1;
 }
 
 .infobar{
@@ -66,13 +74,10 @@ opacity:0.75;
   padding:10px;
   border-radius:5px;
   width:200px;
-  opacity:0.75;
-  transform:scale(0.85);
-  transform-origin: bottom right;
+  opacity:0.75;  
 }
 
 .interface .sliders{
-    transform:rotate(-90deg);
 }
 
 
@@ -110,10 +115,9 @@ opacity:0.75;
 
 .interface .closebtn{
   color:red;
-text-align:left;
+text-align:right;
 margin-top: -5px;
 margin-bottom: -15px;
-margin-left: -5px;
   font-size:14px;
 }
 
