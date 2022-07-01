@@ -5,7 +5,8 @@ A lip-sync VRM avatar client for zero-webcam mic-based vtubing:
 ![Image](/assets/VU-VRM.gif?raw=true "VU-VRM")
 
 # Why?
-Because multitasking. Because sometimes you need to run an avatar without a webcam. Because vtubers are disabled too. Because it's not always essential to bring your face to work. Because an avatar the folks associate with you can be more personable than a little green light when you're on a voice call. Because what if [VRM](https://vrm.dev/en/), but with PNGtuber rules?
+Because multitasking. Because sometimes you need to run an avatar without a webcam. Because vtubers are disabled too. Because everyone gets webcam fatigue. Because it's not always essential to bring your face to work. Because an avatar the folks associate with you can be more personable than a little green light when you're on a voice call. Because I made this for use at work, and it's turned out real handy. Because what if [VRM](https://vrm.dev/en/), but with PNGtuber rules?
+
 
 # Usage
 While this works just fine for testing if you [visit its pages url](https://automattic.github.io/VU-VRM/) (and allow mic access), it's intended for use in [OBS](https://obsproject.com) as a browser source.
